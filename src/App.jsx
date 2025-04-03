@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard"
 // import RecipeDetail from "./components/RecipeDetail"
 import RecipeCard from "./components/RecipeCard"
 import CheifOnWork from "./components/CheifOnWork"
+import LandingPage from "./pages/LandingPage"
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
 
 
         <Routes>
+          <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
