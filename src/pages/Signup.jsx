@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ChefHat, User, Mail, Lock, UtensilsCrossed, Loader2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthProvider';
+import CheifOnWork from '../components/CheifOnWork';
 
 const Signup = () => {
   const [userData, setUserData] = useState({
@@ -64,6 +65,7 @@ const Signup = () => {
   };
 
   return (
+    <div className="min-h-screen flex sm:flex-col lg:flex-row justify-center  gap-3 ml-10 py-12 bg-gradient-to-br from-orange-100 via-red-50 to-amber-50">
     <div className="w-full max-w-md transform transition-all">
       <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
         <div className="px-8 py-6 bg-gradient-to-r from-emerald-400 to-teal-500">
@@ -157,6 +159,10 @@ const Signup = () => {
             Join thousands of food enthusiasts sharing their recipes
           </div>
         </div>
+      </div>
+    </div>
+    <div className="w-full max-w-lg">
+        <CheifOnWork />
       </div>
     </div>
   );

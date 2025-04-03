@@ -54,13 +54,6 @@ export default function RecipeCard() {
 
   if (!recipe) return null;
 
-  if (showInstructions) {
-    return (
-      <RecipeInstructions
-      />
-    );
-  }
-
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4">
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -125,18 +118,17 @@ export default function RecipeCard() {
               onClick={() => setShowInstructions(!showInstructions)}
               className="w-full flex items-center justify-center space-x-2 px-4 py-3 bg-orange-600 hover:bg-orange-700 text-white rounded-xl transition duration-200"
             >
-              <span className="font-medium">View Instructions</span>
+              <span className="font-medium">{showInstructions?"Hide Instructions":"View Instructions"}</span>
               <ChevronLeft className="w-5 h-5 rotate-180" />
             </button>
           </div>
-
           {showIngredients && (
-            <div className="mt-6 grid gap-4 md:grid-cols-2">
+              <div className="mt-6 mb-4 grid gap-4 md:grid-cols-2">
               {recipe.extendedIngredients.map((ingredient, index) => (
-                <div 
+                  <div 
                   key={index}
                   className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg"
-                >
+                  >
                   <div className="h-2 w-2 mt-2 rounded-full bg-orange-400 flex-shrink-0" />
                   <div>
                     <span className="font-medium">
@@ -144,7 +136,7 @@ export default function RecipeCard() {
                     </span>
                     <span className="text-gray-700"> {ingredient.name}</span>
                     {ingredient.meta?.length > 0 && (
-                      <span className="block text-sm text-gray-500 mt-1">
+                        <span className="block text-sm text-gray-500 mt-1">
                         ({ingredient.meta.join(', ')})
                       </span>
                     )}
@@ -153,6 +145,7 @@ export default function RecipeCard() {
               ))}
             </div>
           )}
+          {showInstructions && <RecipeInstructions />}
 
           {recipe.winePairing?.pairedWines?.length > 0 && (
             <div className="border-t border-gray-100 pt-8">
