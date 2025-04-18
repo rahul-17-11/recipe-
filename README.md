@@ -1,12 +1,24 @@
-# React + Vite
+# Recipe Management App 🍽️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive Recipe Management App built with React. This app allows users to browse a curated collection of recipes and view detailed instructions in an intuitive and clean UI.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [recipe-managment.netlify.app](https://recipe-managment.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- View a variety of delicious recipes
+- Clean and responsive UI
+- Dynamic routing for detailed recipe pages
+- Fully static front-end hosted on Netlify
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+- React
+- React Router
+- CSS (or your preferred styling method)
+
+## Getting Started
+
+1. Clone the repository  
+   ```bash
+   git clone https://github.com/your-username/recipe-management-app.git
